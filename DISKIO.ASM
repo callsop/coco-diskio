@@ -84,7 +84,7 @@ ZBEGIN  PSHS    X,Y,U,DP,A
         LDU     $18F
         STA     ZSAVE,PCR
         STU     ZSAVE+1,PCR
-	LDA     $191
+        LDA     $191
         LDU     $192
         STA     ZSAVE+3,PCR
         STU     ZSAVE+4,PCR
@@ -92,8 +92,8 @@ ZBEGIN  PSHS    X,Y,U,DP,A
         LEAU    ZERROR,PCR
         STA     $18E
         STU     $18F
-	STA     $191
-	STU     $192
+        STA     $191
+        STU     $192
         LDA     ,S
         STS     ZSTACK,PCR
         JMP     [8,S]
@@ -106,10 +106,10 @@ ZEXIT   LDA     ZSAVE,PCR
         LDU     ZSAVE+1,PCR
         STA     $18E
         STU     $18F
-	LDA     ZSAVE+3,PCR
+        LDA     ZSAVE+3,PCR
         LDU     ZSAVE+4,PCR
         STA     $191
-        STU     $192	
+        STU     $192
         LDA     SPEED
         LSLA
         LDU     #65495
